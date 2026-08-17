@@ -66,15 +66,16 @@ function CartItem() {
 
                     <p>Unit Price: ₹{item.price}</p>
 
-                    <p>
-                      Item Total: ₹{itemTotal}
-                    </p>
+                    <p>Quantity: {item.quantity}</p>
+
+                    <p>Item Total: ₹{itemTotal}</p>
 
                     <div className="quantity-controls">
                       <button
                         onClick={() =>
                           dispatch(decreaseQuantity(item.id))
                         }
+                        aria-label={`Decrease ${item.name} quantity`}
                       >
                         −
                       </button>
@@ -85,6 +86,7 @@ function CartItem() {
                         onClick={() =>
                           dispatch(increaseQuantity(item.id))
                         }
+                        aria-label={`Increase ${item.name} quantity`}
                       >
                         +
                       </button>

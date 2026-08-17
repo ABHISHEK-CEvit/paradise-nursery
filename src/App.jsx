@@ -1,53 +1,68 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 
 import AboutUs from "./components/AboutUs";
-import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import CartItem from "./components/CartItem";
-
-import "./App.css";
+import Navbar from "./components/Navbar";
 
 function Home() {
+  const [showProducts, setShowProducts] = useState(false);
+
   return (
-    <div className="landing-page">
-      <div className="landing-overlay">
+    <div className="landing-page background-image">
+      <div className="landing-content">
         <h1>Paradise Nursery</h1>
 
-        <AboutUs />
+        <p>
+          Welcome to Paradise Nursery, your destination for beautiful
+          and healthy houseplants. We offer a wide variety of indoor
+          plants to bring freshness, beauty, and nature into your home.
+        </p>
 
-        <Link to="/plants" className="get-started-btn">
-         Get Started
+        <Link
+          to="/plants"
+          className="get-started-btn"
+          onClick={() => setShowProducts(true)}
+        >
+          Get Started
         </Link>
       </div>
+
+      {showProducts && null}
     </div>
   );
 }
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-      <Route
-        path="/plants"
-        element={
-          <>
-            <Navbar />
-            <ProductList />
-          </>
-        }
-      />
+        <Route
+          path="/plants"
+          element={
+            <>
+              <Navbar />
+              <ProductList />
+            </>
+          }
+        />
 
-      <Route
-        path="/cart"
-        element={
-          <>
-            <Navbar />
-            <CartItem />
-          </>
-        }
-      />
-    </Routes>
+        <Route
+          path="/cart"
+          element={
+            <>
+              <Navbar />
+              <CartItem />
+            </>
+          }
+        />
+
+        <Route path="/about" element={<AboutUs />} />
+      </Routes>
+    </>
   );
 }
 

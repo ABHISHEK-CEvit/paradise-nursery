@@ -206,12 +206,12 @@
   margin-bottom: 25px;
 }
 
-.about-us h2 {
+.about-us-container h2 {
   font-size: 28px;
   margin-bottom: 15px;
 }
 
-.about-us p {
+.about-us-container p {
   font-size: 18px;
   line-height: 1.7;
 }
@@ -623,4 +623,16 @@
     text-align: center;
     width: 100%;
   }
+}
+.background-image {
+  background-image: url("/images/nursery-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background-image {
+  background-image: url("/images/nursery-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

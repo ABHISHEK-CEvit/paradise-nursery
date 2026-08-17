@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { addItem } from "../redux/CartSlice";
 import plants from "../data/plants";
 
@@ -6,6 +7,11 @@ function ProductList() {
   const dispatch = useDispatch();
 
   const cartItems = useSelector((state) => state.cart.items);
+
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
 
   const isInCart = (id) => {
     return cartItems.some((item) => item.id === id);
@@ -15,6 +21,13 @@ function ProductList() {
 
   return (
     <div className="product-page">
+
+      <div className="product-cart-summary">
+        <Link to="/cart">
+          🛒 Cart ({totalItems})
+        </Link>
+      </div>
+
       <h1>Our Houseplants</h1>
 
       <p className="product-intro">
@@ -30,6 +43,7 @@ function ProductList() {
               .filter((plant) => plant.category === category)
               .map((plant) => (
                 <div className="plant-card" key={plant.id}>
+
                   <img
                     src={plant.image}
                     alt={plant.name}
@@ -53,6 +67,7 @@ function ProductList() {
                         : "Add to Cart"}
                     </button>
                   </div>
+
                 </div>
               ))}
           </div>
