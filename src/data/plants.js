@@ -1,14 +1,12 @@
-const plants = [
-  // =========================
-  // AIR PURIFYING PLANTS
-  // =========================
+const imageBase = `${import.meta.env.BASE_URL}images/`;
 
+const plants = [
   {
     id: 1,
     name: "Snake Plant",
     category: "Air Purifying",
     price: 299,
-    image: "/images/snake-plant.jpg",
+    image: `${imageBase}snake-plant.jpg`,
   },
 
   {
@@ -16,7 +14,7 @@ const plants = [
     name: "Spider Plant",
     category: "Air Purifying",
     price: 249,
-    image: "/images/spider-plant.jpg",
+    image: `${imageBase}spider-plant.jpg`,
   },
 
   {
@@ -24,7 +22,7 @@ const plants = [
     name: "Peace Lily",
     category: "Air Purifying",
     price: 399,
-    image: "/images/peace-lily.jpg",
+    image: `${imageBase}peace-lily.jpg`,
   },
 
   {
@@ -32,7 +30,7 @@ const plants = [
     name: "Aloe Vera",
     category: "Air Purifying",
     price: 199,
-    image: "/images/aloe-vera.jpg",
+    image: `${imageBase}aloe-vera.jpg`,
   },
 
   {
@@ -40,7 +38,7 @@ const plants = [
     name: "Rubber Plant",
     category: "Air Purifying",
     price: 449,
-    image: "/images/rubber-plant.jpg",
+    image: `${imageBase}rubber-plant.jpg`,
   },
 
   {
@@ -48,19 +46,15 @@ const plants = [
     name: "Boston Fern",
     category: "Air Purifying",
     price: 349,
-    image: "/images/boston-fern.jpg",
+    image: `${imageBase}boston-fern.jpg`,
   },
-
-  // =========================
-  // AROMATIC PLANTS
-  // =========================
 
   {
     id: 7,
     name: "Lavender",
     category: "Aromatic",
     price: 299,
-    image: "/images/lavender.jpg",
+    image: `${imageBase}lavender.jpg`,
   },
 
   {
@@ -68,7 +62,7 @@ const plants = [
     name: "Rosemary",
     category: "Aromatic",
     price: 249,
-    image: "/images/rosemary.jpg",
+    image: `${imageBase}rosemary.jpg`,
   },
 
   {
@@ -76,7 +70,7 @@ const plants = [
     name: "Mint",
     category: "Aromatic",
     price: 149,
-    image: "/images/mint.jpg",
+    image: `${imageBase}mint.jpg`,
   },
 
   {
@@ -84,7 +78,7 @@ const plants = [
     name: "Basil",
     category: "Aromatic",
     price: 179,
-    image: "/images/basil.jpg",
+    image: `${imageBase}basil.jpg`,
   },
 
   {
@@ -92,7 +86,7 @@ const plants = [
     name: "Thyme",
     category: "Aromatic",
     price: 199,
-    image: "/images/thyme.jpg",
+    image: `${imageBase}thyme.jpg`,
   },
 
   {
@@ -100,19 +94,15 @@ const plants = [
     name: "Lemon Balm",
     category: "Aromatic",
     price: 229,
-    image: "/images/lemon-balm.jpg",
+    image: `${imageBase}lemon-balm.jpg`,
   },
-
-  // =========================
-  // DECORATIVE PLANTS
-  // =========================
 
   {
     id: 13,
     name: "Monstera",
     category: "Decorative",
     price: 599,
-    image: "/images/monstera.jpg",
+    image: `${imageBase}monstera.jpg`,
   },
 
   {
@@ -120,7 +110,7 @@ const plants = [
     name: "Money Plant",
     category: "Decorative",
     price: 249,
-    image: "/images/money-plant.jpg",
+    image: `${imageBase}money-plant.jpg`,
   },
 
   {
@@ -128,7 +118,7 @@ const plants = [
     name: "ZZ Plant",
     category: "Decorative",
     price: 499,
-    image: "/images/zz-plant.jpg",
+    image: `${imageBase}zz-plant.jpg`,
   },
 
   {
@@ -136,7 +126,7 @@ const plants = [
     name: "Calathea",
     category: "Decorative",
     price: 549,
-    image: "/images/calathea.jpg",
+    image: `${imageBase}calathea.jpg`,
   },
 
   {
@@ -144,7 +134,7 @@ const plants = [
     name: "Jade Plant",
     category: "Decorative",
     price: 299,
-    image: "/images/jade-plant.jpg",
+    image: `${imageBase}jade-plant.jpg`,
   },
 
   {
@@ -152,7 +142,7 @@ const plants = [
     name: "Fiddle Leaf Fig",
     category: "Decorative",
     price: 699,
-    image: "/images/fiddle-leaf-fig.jpg",
+    image: `${imageBase}fiddle-leaf-fig.jpg`,
   },
 ];
 
